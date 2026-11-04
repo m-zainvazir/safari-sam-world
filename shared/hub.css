@@ -40,3 +40,10 @@ body {
 }
 .hub-say.show { opacity: 1; transform: translate(-50%, 0); }
 .hub-btn:focus-visible, .gate:focus-visible { outline: 4px solid var(--ss-sun); outline-offset: 4px; }
+
+/* Pin each part to its own grid row, so an element a browser extension injects into <body>
+   (e.g. <div id="rss-app">) cannot take a row and push the page down. */
+body > .hub-bar { grid-row: 1; grid-column: 1; }
+body > main { grid-row: 2; grid-column: 1; min-height: 0; }
+body > nav.hoods { grid-row: 3; grid-column: 1; }
+body > #rss-app { display: none; }
