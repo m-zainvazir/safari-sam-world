@@ -13,9 +13,9 @@
 <style>
 /* Option B — Safari Island: one illustrated island seen from above. Each place sits where it belongs in
    nature; tap it and Sam travels there, then the map zooms in. Map units are 1600 x 1100; sizes in cqw = 1% of map width. */
-body { display: grid; grid-template-rows: auto 1fr; overflow: hidden; background: #3fa9d8; }
+body { display: grid; grid-template-rows: auto minmax(0, 1fr); height: 100vh; height: 100dvh; overflow: hidden; background: #3fa9d8; }
 
-.wrap { position: relative; display: flex; overflow: auto; container-type: size; overscroll-behavior: contain; scrollbar-width: thin; }
+.wrap { min-height: 0; position: relative; display: flex; overflow: auto; container-type: size; overscroll-behavior: contain; scrollbar-width: thin; }
 .map {
   position: relative; flex: none; margin: auto;
   width: max(900px, calc(100cqh * 16 / 11)); aspect-ratio: 16 / 11;

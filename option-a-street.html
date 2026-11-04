@@ -13,10 +13,10 @@
 <style>
 /* Option A — Explorer Street: one long street you swipe sideways. Gates stand in a row, grouped
    into four neighbourhoods; each neighbourhood has its own sky and road. Sizes in cqh = 1% of the street's height. */
-body { display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; background: #7cc8f5; }
+body { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; height: 100vh; height: 100dvh; overflow: hidden; background: #7cc8f5; }
 
 .street {
-  position: relative; container-type: size;
+  min-height: 0; position: relative; container-type: size;
   overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; scrollbar-width: none;
 }
 .street::-webkit-scrollbar { display: none; }

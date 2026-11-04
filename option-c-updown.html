@@ -13,7 +13,7 @@
 <style>
 /* Option C — Top-to-Bottom World: the world cut open like a cake. Scroll up from Hometown to the sky and
    space, or down under the ground (left) and under the sea (right). A height bar shows where Sam is. */
-body { display: grid; grid-template-rows: auto 1fr; overflow: hidden; background: #0b0b2a; }
+body { display: grid; grid-template-rows: auto minmax(0, 1fr); height: 100vh; height: 100dvh; overflow: hidden; background: #0b0b2a; }
 .tower { position: relative; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { .tower { scroll-behavior: auto; } }
 
